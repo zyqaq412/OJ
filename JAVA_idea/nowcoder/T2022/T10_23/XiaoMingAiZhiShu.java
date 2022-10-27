@@ -36,7 +36,7 @@ public class XiaoMingAiZhiShu {
             l = sc.nextInt();
             r = sc.nextInt();
 
-            bw.append((arr[r]-arr[l-1])+"\n");
+            bw.append((arr[r]-arr[l-1])).append("\n");
         }
         System.out.println(bw);
 
