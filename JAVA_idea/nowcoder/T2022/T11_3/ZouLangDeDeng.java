@@ -18,6 +18,134 @@ import java.util.Scanner;
 public class ZouLangDeDeng {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+
+        StringBuffer sb = new StringBuffer();
+
+        for (int i = 0; i < t; i++) {
+
+            int h = sc.nextInt();
+
+            String s= sc.next();
+
+            int max1 =0;
+
+            int max2 =0;
+
+            int t1=0;
+
+            int t2=0;
+
+            for (int j = 0; j < h; j++) {
+
+
+
+                if (s.charAt(j)!='1') {
+
+                    t1++;
+                    max1 = max1 > t1?max1:t1;
+
+                }else {
+
+
+                    t1=0;
+
+                }
+
+                if (s.charAt(j)!='0') {
+
+                    t2++;
+                    max2 = max2 > t2?max2:t2;
+
+                }else {
+
+
+                    t2 = 0;
+
+                }
+
+
+
+            }
+
+            //max1 = max1 > t1?max1:t1;
+
+//max2 = max2 > t2?max2:t2;
+
+            sb.append(Math.max(max1,max2)).append("\n");
+
+        }
+
+        System.out.println(sb);
+
+    }
+    /*public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+
+        StringBuffer sb = new StringBuffer();
+
+        for (int i = 0; i < t; i++) {
+
+            int h = sc.nextInt();
+
+            String s= sc.next();
+
+            int max1 =0;
+
+            int max2 =0;
+
+            int t1=0;
+
+            int t2=0;
+
+            for (int j = 0; j < h; j++) {
+
+
+
+                if (s.charAt(j)!='1') {
+
+                    t1++;
+
+                }else {
+
+                    max1 = max1 > t1?max1:t1;
+                    t1=0;
+
+                }
+
+                if (s.charAt(j)!='0') {
+
+                    t2++;
+
+                }else {
+
+                    max2 = max2 > t2?max2:t2;
+
+                    t2 = 0;
+
+                }
+
+
+
+            }
+
+            max1 = max1 > t1?max1:t1;
+
+            max2 = max2 > t2?max2:t2;
+
+            sb.append(Math.max(max1,max2)).append("\n");
+
+        }
+
+        System.out.println(sb);
+
+    }*/
+   /* public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
 
 
@@ -43,14 +171,14 @@ public class ZouLangDeDeng {
                     t1++;
                     t2++;
                 }
-                /*if (s.charAt(j)!='1')max1=++t1;
+                *//*if (s.charAt(j)!='1')max1=++t1;
                 else  t1=0;
                 if (s.charAt(j)!='0')max2=++t2;
-                else  t2=0;*/
+                else  t2=0;*//*
             }
             max = max > Math.max(t1,t2)?max:Math.max(t1,t2);
             sb.append(max).append("\n");
         }
         System.out.println(sb);
-    }
+    }*/
 }
