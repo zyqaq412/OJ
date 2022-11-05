@@ -1,4 +1,4 @@
-package hzy.T2022.T10_23;
+package T10_23;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
