@@ -8,12 +8,14 @@ import java.util.Scanner;
  * @Date: 2022/11/5 15:35
  * @Version 1.0
  *
- * 链接：https://ac.nowcoder.com/acm/contest/45958/B
+ * 链接：https://ac.nowcoder.com/acm/contest/45958/D
  * 来源：牛客网
  *
- * 移通学院以各式各样的活动来促成我们的全面发展，如果你成为了某部门的部长，你会需要管理你部门的n个干事，
- * 由于每个干事的个人能力不同，所能完成的工作也不同，如果我们给每个干事设定一项“能力值”表示某干事的能力，
- * 为了方便管理我们将干事的能力从小到大排序。
+ * Laker同学和Liser同学在课堂上学习了高斯求和，也就是1 + 2 + 3 + 4 + 5  + ... + n 求和。
+ * Laker觉得这样的数列求和很简单，想考考Liser，问：“Sn = 1 + 1/2 + 1/3 + 1/4 + ... + 1/n。
+ * 对于任意的一个整数 m，当 n 足够大的时候，Sn  >  m。现在给出一个整数 m，求满足条件的最小 n，使得  Sn > m”。
+ *
+ *
  */
 public class ShuLie {
     public static void main(String[] args) {
