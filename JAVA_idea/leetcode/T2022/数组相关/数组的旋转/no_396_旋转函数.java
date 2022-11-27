@@ -16,6 +16,20 @@ public class no_396_旋转函数 {
         int sum = Arrays.stream(nums1).sum();
         System.out.println(sum);
     }
+
+
+    public int maxRotateFunction2(int[] nums) {
+        int sum = 0, curSum = 0, ans = 0;
+        for (int i = 0; i < nums.length; ++i){sum += nums[i]; curSum += i * nums[i];}
+        ans = curSum;
+        for (int i = nums.length - 1; i > 0; --i) {
+            curSum += sum - nums.length * nums[i];
+            ans = Math.max(ans, curSum);
+        }
+        return ans;
+    }
+
+
     public int maxRotateFunction(int[] nums) {
         int n = nums.length;
         int max = Integer.MIN_VALUE;
