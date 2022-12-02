@@ -18,6 +18,7 @@ public class no_434_字符串中的单词数 {
         int segmentCount = 0;
 
         for (int i = 0; i < s.length(); i++) {
+            //遍历查找每一个单词的首字母 (第一个字符不是空字符 或者 上一个字符是空字符，当前字符不是空字符都是单词首字母)
             if ((i == 0 || s.charAt(i - 1) == ' ') && s.charAt(i) != ' ') {
                 segmentCount++;
             }
