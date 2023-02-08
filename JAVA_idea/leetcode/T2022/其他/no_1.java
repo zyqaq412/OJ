@@ -1,4 +1,4 @@
-package hzy.T2022.T10_20;
+package 其他;
 
 /**
  * @title: no_1
