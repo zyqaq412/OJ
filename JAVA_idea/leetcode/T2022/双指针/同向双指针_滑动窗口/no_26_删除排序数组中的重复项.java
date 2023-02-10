@@ -33,6 +33,6 @@ public class no_26_删除排序数组中的重复项 {
 
             if(nums[j] != nums[i]) nums[++j] = nums[i];
         }
-        return j;
+        return j+1;
     }
 }
