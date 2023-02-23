@@ -41,13 +41,28 @@ public class no_495 {
         int duration = 2;
         System.out.println(new no_495().findPoisonedDuration(timeSeries,duration));
     }
+
+
+    // 二刷
+    public int findPoisonedDuration2(int[] timeSeries, int duration) {
+        int sum = 0;
+        int length = timeSeries.length;
+        for (int i = 1; i < length; i++) {
+            if (timeSeries[i] - timeSeries[i-1] > duration){
+                sum += duration;
+            }else {
+                sum += timeSeries[i] - timeSeries[i-1];
+            }
+        }
+        return sum+duration;
+    }
+
     public int findPoisonedDuration(int[] timeSeries, int duration) {
             int count = 0;
         for (int i = 0; i < timeSeries.length; i++) {
             if (timeSeries.length == i+1){
                 count += duration;
                 return count;
-
             }
             if (timeSeries[i]+duration-1 <timeSeries[i+1]){
                 count += duration;
