@@ -1,5 +1,7 @@
 package 数组相关.数组遍历;
 
+import java.util.Arrays;
+
 /**
  * @title: no_628
  * @Author zxwyhzy
@@ -26,6 +28,14 @@ public class no_628 {
        int[] nums = {1000, -1000, -1000};
         System.out.println(new no_628().maximumProduct(nums));
 
+    }
+
+
+    // 二刷
+    public int maximumProduct2(int[] nums) {
+        Arrays.sort(nums);
+        return Math.max(nums[nums.length-1]*nums[nums.length-2]*nums[nums.length-3],
+                        nums[0]*nums[1]*nums[nums.length-1]);
     }
 
 
