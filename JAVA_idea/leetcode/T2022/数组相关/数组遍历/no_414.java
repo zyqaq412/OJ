@@ -1,5 +1,7 @@
 package 数组相关.数组遍历;
 
+import java.util.Arrays;
+
 /**
  * @title: no_414
  * @Author zxwyhzy
@@ -22,6 +24,21 @@ public class no_414 {
     public static void main(String[] args) {
         int[] nums = {1,2,3,3,3,4,5,45,5,45,4};
         System.out.println(new no_414().thirdMax(nums));
+    }
+
+// 二刷
+    public int thirdMax2(int[] nums) {
+
+        Arrays.sort(nums);
+        int count = 1;
+        int length = nums.length;
+        for (int i = length-2; i >= 0 ; i--) {
+            if (nums[i] != nums[i+1]){
+                count++;
+                if (count == 3) return nums[i];
+            }
+        }
+        return nums[nums.length-1];
     }
 
     public int thirdMax(int[] nums) {
