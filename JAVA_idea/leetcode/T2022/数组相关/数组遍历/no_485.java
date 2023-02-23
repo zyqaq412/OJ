@@ -27,9 +27,24 @@ package 数组相关.数组遍历;
 public class no_485 {
     public static void main(String[] args) {
         int[] nums = {1,1,1,0,1,0,1,1,1,1,1};
-        System.out.println(new no_485().findMaxConsecutiveOnes2(nums));
+        System.out.println(new no_485().findMaxConsecutiveOnes3(nums));
     }
 
+    // 二刷
+    public int findMaxConsecutiveOnes3(int[] nums) {
+        int max = 0;
+        int count = 0;
+        int length = nums.length;
+        for (int i = 0; i < length; i++) {
+            if (nums[i] == 1) count++;
+            else {
+                max = Math.max(max,count);
+                count = 0;
+            }
+        }
+        return Math.max(max,count);
+
+    }
     public int findMaxConsecutiveOnes(int[] nums) {
             int max = 0;
             int temp = 0;
