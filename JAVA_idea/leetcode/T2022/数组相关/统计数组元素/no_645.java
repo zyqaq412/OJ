@@ -1,5 +1,8 @@
 package 数组相关.统计数组元素;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.TreeSet;
 
 /**
@@ -18,14 +21,26 @@ import java.util.TreeSet;
  * 请你找出重复出现的整数，再找到丢失的整数，将它们以数组的形式返回。
  */
 public class no_645 {
-    public static void main(String[] args) {
-        int[] a =new no_645().findErrorNums(new int[]{1, 1});
-        for (int i : a) {
-            System.out.print(i+"\t");
+
+    // 二刷
+    public int[] findErrorNums2(int[] nums) {
+        TreeSet<Integer> set = new TreeSet();
+        int[] ErrorNums = new int[2];
+        for (int num : nums) {
+            if (!set.add(num)){
+                // 重复的数
+                ErrorNums[0] = num;
+            }
         }
-
-
+        for (int i = 1; i <= nums.length; i++) {
+            if (set.add(i)) {
+                ErrorNums[1] = i;
+                break;
+            }
+        }
+        return ErrorNums;
     }
+
     public int[] findErrorNums(int[] nums) {
         TreeSet<Integer> set = new TreeSet();
         int[] a = new int[2];
