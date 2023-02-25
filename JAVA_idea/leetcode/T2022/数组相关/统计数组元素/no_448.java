@@ -2,6 +2,7 @@ package 数组相关.统计数组元素;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
 
 /**
  * @title: no_448
@@ -14,6 +15,21 @@ import java.util.List;
 
  */
 public class no_448 {
+
+    // 二刷
+    public List<Integer> findDisappearedNumbers2(int[] nums) {
+        int length = nums.length;
+        List list = new ArrayList();
+        TreeSet<Integer> set = new TreeSet();
+        for (int num : nums) {
+            set.add(num);
+        }
+        for (int i = 1; i <= length; i++) {
+            if (set.add(i)) list.add(i);
+        }
+        return list;
+    }
+
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List list = new ArrayList();
 
