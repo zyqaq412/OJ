@@ -18,8 +18,24 @@ import java.util.Arrays;
 public class no_274 {
     public static void main(String[] args) {
         int[] a = {3,0,6,1,5};
-        System.out.println(new no_274().hIndex2(a));
+        System.out.println(new no_274().hIndex(a));
     }
+
+   // 二刷
+    public int hIndex(int[] citations) {
+        Arrays.sort(citations);
+        int length = citations.length;
+        int h = 0;
+        for (int i = length-1; i >= 0; i--) {
+            if (citations[i] > h) h++;
+        }
+        return h;
+    }
+
+
+
+
+
     public int hIndex1(int[] citations) {
         //排序
         Arrays.sort(citations);
