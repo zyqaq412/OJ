@@ -13,9 +13,12 @@ import java.util.Arrays;
  */
 public class no_453 {
     public int minMoves(int[] nums) {
-       int min =  Arrays.stream(nums).min().getAsInt();//取最小值
-        //n-1 个数加1 相当于 1 个数减一
-        //计算所有大于最小数的数 减1到最小数 的次数和
+       int min =  Arrays.stream(nums)
+               .min()
+               .getAsInt();//取最小值
+        // n-1 个数加1 相当于 1 个数减一
+        // 计算所有大于最小数的数 减1到最小数 的次数和
+        // 每次减一相当于计算其他数和最小数的差值
         int sum = 0;
         for (int num : nums) {
             sum+= num-min;
