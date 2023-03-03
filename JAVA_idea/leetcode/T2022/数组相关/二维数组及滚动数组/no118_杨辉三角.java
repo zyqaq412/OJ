@@ -15,6 +15,33 @@ import java.util.List;
  * 在「杨辉三角」中，每个数是它左上方和右上方的数的和。
  */
 public class no118_杨辉三角 {
+
+    // 二刷
+    public List<List<Integer>> generate2(int numRows) {
+        List<List<Integer>> lists = new ArrayList<>();
+
+        for (int i = 1; i <= numRows; i++) {
+            List<Integer> list = new ArrayList<>();
+            for (int j = 1;j<=i;j++){
+                if (j== 1|| j==i){
+                    list.add(1);
+                }else {
+                    list.add(lists.get(i-2).get(j-2)+lists.get(i-1).get(j));
+                }
+            }
+            lists.add(list);
+        }
+
+        return lists;
+    }
+
+
+
+
+
+
+
+
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> lists = new ArrayList<>();
         for (int i = 0;i<numRows;i++){
