@@ -25,6 +25,35 @@ public class no119_杨辉三角2 {
     9-->[1, 8, 28, 56, 70, 56, 28, 8, 1]
    */
 
+    // 二刷
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> list = new ArrayList<>();
+        for (int i =0 ; i <= rowIndex; i++) {
+            if (i==1 || i==0){
+                // 第一行和第二行直接加一然后下一条
+                list.add(1);
+                continue;
+            }else {
+                // 第三行开始先再后面加一
+                list.add(1);
+                // 第3行开始 第j的数等于 上一行 j + j-1
+                // 因为只有一个数组 后一个的数新值要用到前一个数
+                // 所以要从后遍历
+                for (int j = i-1; j > 0 ; j--) {
+                    list.set(j,list.get(j)+list.get(j-1));
+                }
+            }
+        }
+        return list;
+
+
+
+    }
+
+
+
+
+
     public static void main(String[] args) {
         System.out.println(new no119_杨辉三角2().getRow(3));
 
@@ -37,7 +66,7 @@ public class no119_杨辉三角2 {
        // list.set(1,3);//[1, 3]
         System.out.println(list);*/
     }
-    public List<Integer> getRow(int rowIndex) {
+    public List<Integer> getRow2(int rowIndex) {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i <= rowIndex; i++) {
             //每次循环都在末尾加1

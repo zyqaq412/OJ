@@ -26,7 +26,7 @@ public class no118_杨辉三角 {
                 if (j== 1|| j==i){
                     list.add(1);
                 }else {
-                    list.add(lists.get(i-2).get(j-2)+lists.get(i-1).get(j));
+                    list.add(lists.get(i-2).get(j-2)+lists.get(i-1).get(j-1));
                 }
             }
             lists.add(list);
