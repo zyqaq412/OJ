@@ -14,6 +14,8 @@ public class HJ108_求最小公倍数 {
             int a = in.nextInt();
             int b = in.nextInt();
 
+            // 最小公倍数 最大的情况就是 a*b
+            // 最小的情况 Math.max(a, b)
             int c = a * b;
             for (int i = Math.max(a, b); i <= c; i += Math.max(a, b)) {
                 if (i % a == 0 && i % b == 0) {
