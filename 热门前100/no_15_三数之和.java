@@ -12,7 +12,7 @@ public class no_15_三数之和{
         }
     }
  static class Solution {
-     public List<List<Integer>> threeSum(int[] nums) {
+     public List<List<Integer>> threeSum(int[] nums) {// 51ms
          // 当前数组的长度为空，或者长度小于3时，直接退出
          if(nums.length<3) return new ArrayList();
          // 排序
@@ -56,7 +56,7 @@ public class no_15_三数之和{
          return lists;
      }
      // 优化
-     public List<List<Integer>> threeSum2(int[] nums) {
+     public List<List<Integer>> threeSum2(int[] nums) {// 33ms
          List<List<Integer>> result = new ArrayList<>();
          // 当前数组的长度为空，或者长度小于3时，直接退出
          if (nums.length < 3) {
