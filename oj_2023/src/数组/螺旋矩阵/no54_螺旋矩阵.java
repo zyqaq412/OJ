@@ -1,4 +1,4 @@
-package 数组;
+package 数组.螺旋矩阵;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,6 +9,10 @@ import java.util.List;
  * @Author zxwyhzy
  * @Date: 2023/9/12 14:22
  * @Version 1.0
+ *
+ * 给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。
+ * https://leetcode.cn/problems/spiral-matrix/description/
+ *
  */
 public class no54_螺旋矩阵 {
     class Solution {
