@@ -2,6 +2,7 @@ package 二叉树;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @title: no_144_二叉树前序遍历
@@ -10,6 +11,26 @@ import java.util.List;
  * @Version 1.0
  */
 public class no_144_二叉树前序遍历 {
+    // 迭代法
+    public List<Integer> preorderTraversal2(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if (root == null){
+            return result;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            result.add(node.val);
+            if (node.right != null){
+                stack.push(node.right);
+            }
+            if (node.left != null){
+                stack.push(node.left);
+            }
+        }
+        return result;
+    }
     public List<Integer> preorderTraversal(TreeNode root) {
 
         ArrayList<Integer> ans = new ArrayList<>();
