@@ -1,4 +1,6 @@
-package 二叉树;
+package 二叉树.二叉树的层序遍历;
+
+import 二叉树.TreeNode;
 
 /**
  * @title: no_104_二叉树的最大深度
