@@ -19,7 +19,7 @@ public class no_654_最大二叉树 {
     private TreeNode process(int[] nums,int i,int j){
         if (i >= j) return null;
         int[] ans = getMax(nums, i, j);
-        
+
         TreeNode root = new TreeNode(ans[0]);
         root.left = process(nums,i,ans[1]);
         root.right = process(nums,ans[1]+1,j);
