@@ -1,4 +1,6 @@
-package 二叉树;
+package 二叉树.二叉搜索树;
+
+import 二叉树.TreeNode;
 
 /**
  * @title: no_98_验证二叉搜索树
