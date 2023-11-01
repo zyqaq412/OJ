@@ -23,7 +23,7 @@ import java.util.Scanner;
  * <p>
  * 10
  */
-public class no_9 {
+public class km_9 {
     class Main {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
